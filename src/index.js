@@ -1,5 +1,4 @@
 const axios = require('axios');
-const { blocksByName, effectsByName } = require("minecraft-data")("1.16.4")
 
 const head = async(name) => {
     if(!name) {
@@ -172,24 +171,6 @@ const achievement = async(title, content) => {
     }
 }
 
-const block = async(name) => {
-    if(!name) {
-        throw Error
-        ('A minecraft block name has not been provided')
-    }else {
-        return blocksByName[name]
-    }
-}
-
-const effect = async(name) => {
-    if(!name) {
-        throw Error
-        ('A minecraft effect name has not been provided')
-    }else {
-        return effectsByName[name]
-    }
-}
-
 const names = async(name) => {
     if(!name) {
         throw Error
@@ -212,7 +193,5 @@ module.exports = {
     mojang,
     achievement,
     hypixel,
-    block,
-    effect,
     names
 };

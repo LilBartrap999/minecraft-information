@@ -1,0 +1,5 @@
+# ignore all logs
+node_modules
+test
+npm-debug.log*
+package.json
