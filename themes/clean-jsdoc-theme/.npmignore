@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+/.DS_Store
+output/
+docs/
+demo/
+CNAME
+copy.sh
+example/

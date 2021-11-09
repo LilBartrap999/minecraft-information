@@ -1,0 +1,36 @@
+{
+    "plugins": ["plugins/markdown"],
+    "source": {
+        "include": ["src/functions"],
+        "includePattern":".js",
+        "excludePattern":"(node_modules|docs)"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts":{
+        "recurse": true,
+        "destination":"./doc",
+        "readme": "./README.md",
+        "template": "themes/clean-jsdoc-theme",
+        "theme_opts": {
+            "theme": "dark",
+            "title": "mc-information",
+            "menu": [
+                {
+                    "title": "Github",
+                    "link": "https://github.com/LilBartrap999/minecraft-information/",
+                    "target": "_blank",
+                    "class": "link-template"
+                },
+                {
+                    "title": "npm",
+                    "link": "https://www.npmjs.com/package/minecraft-information",
+                    "target": "_blank",
+                    "class": "link-template"
+                }
+            ]
+        }
+    }
+}

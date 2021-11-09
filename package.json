@@ -1,11 +1,12 @@
 {
   "name": "minecraft-information",
-  "version": "0.4.3",
+  "version": "0.4.9",
   "description": "minecraft-information is an npm that makes it easy for you to create commands about minecraft in discord.js for your bot",
-  "main": "src/index.js",
+  "main": "src/funtions/main.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "keywords": [
     "minecraft",
@@ -17,12 +18,16 @@
     "info-minecraft"
   ],
   "homepage": "hthttps://github.com/LilBartrap999/minecraft-information#readme",
-  "url" : "https://github.com/LilBartrap999/minecraft-information/issues",
+  "url": "https://github.com/LilBartrap999/minecraft-information/issues",
   "author": "LilBartrap <contact.lilbartrap@gmail.com> (https://www.mc-info.ga/)",
-  "email" : "contact.lilbartrap@gmail.com",
+  "email": "contact.lilbartrap@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.24.0",
     "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "jsdoc": "^3.6.7"
   }
 }
