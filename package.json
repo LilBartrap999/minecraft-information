@@ -4,7 +4,7 @@
   "description": "minecraft-information is an npm that makes it easy for you to create commands about minecraft in discord.js for your bot",
   "main": "src/funtions/main.js",
   "scripts": {
-    "start": "node test.js",
+    "start": "node examples/test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "doc": "jsdoc -c jsdoc.json"
   },
