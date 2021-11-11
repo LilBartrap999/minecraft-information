@@ -44,7 +44,7 @@ client.on('message', async(msg) => {
 ## Information
 
 - Creator: [Lil Bartrap#3222](https://github.com/lilbartrap999)
-- Official Bot: [Invite](https://discord.com/oauth2/authorize?client_id=708562057590603796&scope=bot&permissions=8)
+- Official Bot: [Invite](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands)
 - Official discord: [https://discord.gg/quSpqcr](https://discord.gg/quSpqcr)
 
-> If you want to get more detailed examples invite the [official bot](https://discord.com/oauth2/authorize?client_id=708562057590603796&scope=bot&permissions=8) to your server and write the command: ?examples
+> If you want to get more detailed examples invite the [official bot](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands) to your server and write the command: ?examples

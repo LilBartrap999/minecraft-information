@@ -1,8 +1,8 @@
 {
   "name": "minecraft-information",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "description": "minecraft-information is an npm that makes it easy for you to create commands about minecraft in discord.js for your bot",
-  "main": "src/funtions/main.js",
+  "main": "src/functions/main.js",
   "scripts": {
     "start": "node examples/test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
