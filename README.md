@@ -8,6 +8,7 @@
 minecraft-information is an npm that makes it easy to find minecraft data for your projects in JavaScript.
   - [Installation](#installation)
   - [How to use](#how-to-use)
+  - [Functions](#functions)
   - [Information](#information)
 
 ## Installation 
@@ -40,6 +41,106 @@ client.on('message', async(msg) => {
   }
 })
 ```
+
+## Functions
+
+|Function|Type|params
+|--|--|--|
+|achievement|```String```|title, content, [index]
+|avatar|```String```|name, [size]
+|body|```String```|name, [size]
+|cape|```Object```|name
+|head|```String```|name
+|hypixel|```Object```|name, key
+|names|```Array```|name
+|profile|```Object```|name
+|skin|```String```|name
+|server|```Object```|ip
+
+### Objects
+
+cape
+```js
+{
+  minecraft: any;
+  optifine: any;
+  minecraftcapes: any;
+  labymod: any;
+  tlauncher: any;
+}
+```
+
+hypixel
+
+To get a key:
+- Join in the server (play.hypixel.net)
+- type the command `/api new`
+
+```js
+{
+  success: Boolean,
+  player: {
+    _id: String,
+    uuid: String,
+    displayname: String,
+    firstLogin: Number,
+    knownAliases: Array,
+    knownAliasesLower: Array,
+    lastLogin: Number,
+    playername: String,
+    achievementsOneTime: Array,
+    stats: Object,
+    userLanguage: String,
+    achievementTracking: Array,
+    achievements: Object,
+    networkExp: Number,
+    lastLogout: Number,
+    achievementPoints: Number,
+    achievementSync: Object,
+    levelingReward_0: Boolean,
+    karma: Number,
+    friendRequestsUuid: Array,
+    petConsumables: Object,
+    vanityMeta: Object,
+    challenges: Object,
+    levelingReward_1: Boolean,
+    tourney: Object,
+    mcVersionRp: String,
+    monthlycrates: Object,
+    mostRecentGameType: String,
+    housingMeta: Object
+}
+```
+
+profile
+```js
+{
+  name: String,
+  id: String
+}
+```
+
+server
+```js
+{
+  serverIcon: String,
+  ip: String,
+  port: Number,
+  version: String,
+  online: Boolean,
+  protocol: Number,
+  hostname: String,
+  players: { online: Number, max: Number },
+  debug: Object,
+  motd: {
+    raw: Array,
+    clean: Array,
+    html: Array
+  }
+}
+```
+
+### Arrays
 
 ## Information
 

@@ -12,7 +12,7 @@ const axios = require('axios').default;
 function achievement(title, content, index) {
     if(!title || !content) {
         throw Error ("Title or content has not been provided");
-    } else if(index <= 0 || index > 39) {
+    } else if(index <= 0 || index >= 40) {
         throw Error ("The index has to be from 1 to 39");
     } else {
         if(!index) index = Math.floor(Math.random() * 39)
@@ -26,11 +26,6 @@ function achievement(title, content, index) {
  * @param {String} name Provide a minecraft username
  * @param {Number} [size] Provide an size (optional)
  * @returns String
- * @example 
- * const { avatar } = require('minecraft-information');
- * avatar('example', 512).then(async x => {
- *   console.log(x)
- * })
  */
 
 async function avatar(name, size) {
@@ -45,11 +40,6 @@ async function avatar(name, size) {
  * @param {String} name Provide a minecraft username
  * @param {Number} [size] Provide an size (optional)
  * @returns String
- * @example 
- * const { body } = require('minecraft-information');
- * body('example', 512).then(async x => {
- *   console.log(x)
- * })
  */
 
 async function body(name, size) {
@@ -63,12 +53,7 @@ async function body(name, size) {
  * Get an image of the minecraft user's cape
  * @param {String} name Provide a minecraft username
  * @returns Object
- * @example 
- * const { cape } = require('minecraft-information');
- * cape('example').then(async x => {
- *   console.log(x.minecraft)
- * })
- */
+*/
 
 async function cape(name) {
     if(!name) throw Error('A minecraft user name has not been provided');
@@ -86,12 +71,7 @@ async function cape(name) {
  * Get an image of the minecraft user's head
  * @param {String} name Provide a minecraft username
  * @returns String
- * @example 
- * const { head } = require('minecraft-information');
- * head('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
 async function head(name) {
     if(!name) throw Error('A minecraft user name has not been provided');
@@ -102,17 +82,14 @@ async function head(name) {
 /**
  * Get information from a hypixel user
  * @param {String} name Provide a minecraft username
+ * @param {String} key Privide a hypixel key
  * @returns Object
- * @example 
- * const { hypixel } = require('minecraft-information');
- * hypixel('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
-async function hypixel(name) {
+async function hypixel(name, key) {
     if(!name) throw Error('A minecraft user name has not been provided');
-    const key = require('../util/data.json').hypixelKEY
+    if(!key) throw Error('You have to enter the hypixel api key');
+    if(key === 'mci-key') key =require('../util/data.json').hypixelKEY
     const uuid = await axios.get(`https://api.mojang.com/users/profiles/minecraft/${name}`);
     const res = await axios.get(`https://api.hypixel.net/player?key=${key}&uuid=${uuid.data.id}`);
     return res.data;
@@ -122,12 +99,7 @@ async function hypixel(name) {
  * Get the names of a user
  * @param {String} name Provide a minecraft username
  * @returns Array
- * @example 
- * const { names } = require('minecraft-information');
- * names('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
 async function names(name) {
     if(!name) throw Error('A minecraft user name has not been provided');
@@ -141,12 +113,7 @@ async function names(name) {
  * Get the profile of a user
  * @param {String} name Provide a minecraft username
  * @returns Object
- * @example 
- * const { profile } = require('minecraft-information');
- * profile('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
 async function profile(name) {
     if(!name) throw Error('A minecraft user name has not been provided');
@@ -158,12 +125,7 @@ async function profile(name) {
  * Get an image of the minecraft user's skin
  * @param {String} name Provide a minecraft username
  * @returns String
- * @example 
- * const { skin } = require('minecraft-information');
- * skin('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
 async function skin(name) {
     if(!name) throw Error('A minecraft user name has not been provided');
@@ -175,12 +137,7 @@ async function skin(name) {
  * Get information from a minecraft server
  * @param {String} ip Provide a minecraft server ip
  * @returns Object
- * @example 
- * const { server } = require('minecraft-information');
- * server('example').then(async x => {
- *   console.log(x)
- * })
- */
+*/
 
 async function server(ip) {
     if(!ip) throw Error('A minecraft ip server has not been provided');
