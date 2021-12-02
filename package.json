@@ -10,6 +10,10 @@
   },
   "keywords": [ "minecraft", "information", "minecraft-information", "discord.js", "javascript", "minecraft-info", "info-minecraft" ],
   "homepage": "hthttps://github.com/LilBartrap999/minecraft-information#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LilBartrap999/minecraft-information.git"
+  },
   "url": "https://github.com/LilBartrap999/minecraft-information/issues",
   "author": "LilBartrap <contact.lilbartrap@gmail.com> (https://mc-info.ga/)",
   "email": "contact.lilbartrap@gmail.com",
