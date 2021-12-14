@@ -2,7 +2,7 @@
 [![npm version](https://img.shields.io/npm/v/minecraft-information?label=version)](https://www.npmjs.com/package/minecraft-information)
 [![License](https://img.shields.io/npm/l/minecraft-information)](https://www.npmjs.com/package/minecraft-information)
 [![Npm weekly downloads](https://img.shields.io/npm/dw/minecraft-information)](https://www.npmjs.com/package/minecraft-information)
-[![Discord server](https://img.shields.io/discord/770577878470623262?label=discord)](https://discord.gg/quSpqcr)
+[![Discord server](https://img.shields.io/discord/770577878470623262?label=discord)](https://discord.gg/hhBxfXnfUn)
 
 ### About
 minecraft-information is an npm that makes it easy to find minecraft data for your projects in JavaScript.
@@ -146,6 +146,6 @@ server
 
 - Creator: [Lil Bartrap#3222](https://github.com/lilbartrap999)
 - Official Bot: [Invite](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands)
-- Official discord: [https://discord.gg/quSpqcr](https://discord.gg/quSpqcr)
+- Official discord: [https://discord.gg/quSpqcr](https://discord.gg/hhBxfXnfUn)
 
 > If you want to get more detailed examples invite the [official bot](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands) to your server and write the command: /examples
