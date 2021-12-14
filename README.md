@@ -142,6 +142,14 @@ server
 
 ### Arrays
 
+names
+```js
+[
+  { name: String },
+  { name: String, changedToAt: Number }, //if have changed name on minecraft //Number is a time on ms
+]
+```
+
 ## Information
 
 - Creator: [Lil Bartrap#3222](https://github.com/lilbartrap999)
