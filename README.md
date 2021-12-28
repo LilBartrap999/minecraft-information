@@ -12,7 +12,7 @@ minecraft-information is an npm that makes it easy to find minecraft data for yo
   - [Information](#information)
 
 ## Installation 
-Node.js 14 or newer is required
+Node.js 12 or newer is required
 
 ```bash
 npm install minecraft-information
@@ -22,27 +22,62 @@ pnpm add minecraft-information
 
 ## How to use
 ```js
-const { avatar } = require('minecraft-information');
 
-avatar('example').then(async(res) => {
+const { Minecraft }  = require('minecraft-information');
+const { HyPixel } = require('minecraft-information');
+const hypixel = new HyPixel('HIPIXEL_API_KEY');
+
+
+Minecraft.avatar('example').then(async(res) => {
   console.log(res)
 })
+
+hypixel.player('example').then(async x => {
+    console.log(x)
+})
+
 ```
 #### How to use on discord.js
 ```js
-const discord = require('discord.js')
-const client = new discord.Client()
-const { avatar } = require('minecraft-information');
+const { Client } = require('discord.js')
+const client = new Client()
+const { Minecraft }  = require('minecraft-information');
 
 client.on('message', async(msg) => {
   if(msg.content.startsWith('?'+'avatar')){
-    let avatar = await avatar('example')
+    let avatar = await Minecraft.avatar('example')
     message.channel.send({files:[avatar]})
   }
 })
 ```
 
 ## Functions
+
+|Function|params
+|--|--|
+| [HyPixel](#hypxel) |API-key
+| [Minecraft](#minecraft) |
+
+### Hypixel
+
+Require an api key
+
+|Function|Type|params
+|--|--|--|
+|player|```Object```|name
+|friends|```Object```|name
+|recentGames|```Object```|name
+|status|```Object```|name
+|boosters|```Object```|
+|playerCount|```Object```|
+|leaderboards|```Object```|
+|punishments|```Object```|
+
+#### How to get a hypixel key:
+- Join in the server (play.hypixel.net)
+- Type the command `/api new`
+
+### Minecraft
 
 |Function|Type|params
 |--|--|--|
@@ -51,109 +86,15 @@ client.on('message', async(msg) => {
 |body|```String```|name, [size]
 |cape|```Object```|name
 |head|```String```|name
-|hypixel|```Object```|name, key
 |names|```Array```|name
 |profile|```Object```|name
 |skin|```String```|name
 |server|```Object```|ip
 
-### Objects
-
-cape
-```js
-{
-  minecraft: any;
-  optifine: any;
-  minecraftcapes: any;
-  labymod: any;
-  tlauncher: any;
-}
-```
-
-hypixel
-
-To get a key:
-- Join in the server (play.hypixel.net)
-- type the command `/api new`
-
-```js
-{
-  success: Boolean,
-  player: {
-    _id: String,
-    uuid: String,
-    displayname: String,
-    firstLogin: Number,
-    knownAliases: Array,
-    knownAliasesLower: Array,
-    lastLogin: Number,
-    playername: String,
-    achievementsOneTime: Array,
-    stats: Object,
-    userLanguage: String,
-    achievementTracking: Array,
-    achievements: Object,
-    networkExp: Number,
-    lastLogout: Number,
-    achievementPoints: Number,
-    achievementSync: Object,
-    levelingReward_0: Boolean,
-    karma: Number,
-    friendRequestsUuid: Array,
-    petConsumables: Object,
-    vanityMeta: Object,
-    challenges: Object,
-    levelingReward_1: Boolean,
-    tourney: Object,
-    mcVersionRp: String,
-    monthlycrates: Object,
-    mostRecentGameType: String,
-    housingMeta: Object
-}
-```
-
-profile
-```js
-{
-  name: String,
-  id: String
-}
-```
-
-server
-```js
-{
-  serverIcon: String,
-  ip: String,
-  port: Number,
-  version: String,
-  online: Boolean,
-  protocol: Number,
-  hostname: String,
-  players: { online: Number, max: Number },
-  debug: Object,
-  motd: {
-    raw: Array,
-    clean: Array,
-    html: Array
-  }
-}
-```
-
-### Arrays
-
-names
-```js
-[
-  { name: String },
-  { name: String, changedToAt: Number }, //if have changed name on minecraft //Number is a time on ms
-]
-```
-
 ## Information
 
 - Creator: [Lil Bartrap#3222](https://github.com/lilbartrap999)
-- Official Bot: [Invite](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands)
-- Official discord: [https://discord.gg/quSpqcr](https://discord.gg/hhBxfXnfUn)
+- Official Bot: [Invite](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=414669721281&scope=bot)
+- Official discord: [https://discord.gg/hhBxfXnfUn](https://discord.gg/hhBxfXnfUn)
 
-> If you want to get more detailed examples invite the [official bot](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=535260687424&scope=bot%20applications.commands) to your server and write the command: /examples
+> If you want to get more detailed examples invite the [official bot](https://discord.com/oauth2/authorize?client_id=708562057590603796&permissions=414669721281&scope=bot) to your server and write the command: !examples
