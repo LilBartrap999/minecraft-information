@@ -1,6 +1,6 @@
 'use-strict';
 const { HyPixel, Minecraft } = require('../index');
-let hypixel = new HyPixel('3727b4f3-c950-49fb-8fe7-26430ed28ece');
+let hypixel = new HyPixel('API_KEY');
 
 // hypixel.player('asdasd-asd').then(async x => {
 //     console.log(x)
