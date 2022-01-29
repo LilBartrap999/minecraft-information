@@ -59,9 +59,9 @@ let hypixel = new HyPixel('API_KEY');
 // })
 
 
-Minecraft.names('anibal_03').then(async x => {
-    console.log(x)
-})
+// Minecraft.names('anibal_03').then(async x => {
+//     console.log(x)
+// })
 
 // Minecraft.profile('anibal_03').then(async x => {
 //     console.log(x)

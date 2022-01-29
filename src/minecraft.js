@@ -121,6 +121,66 @@ function Minecraft() {
             }
         }
     };
+
+    Minecraft.prototype.item = async function(name) {
+        let version = "1.18.1"
+        const mc_data = require(`../data/versions/${version}/items.json`);
+        let items = [];
+        if(!name) {
+            for (const item of mc_data) {
+                items.push(`${item.name}`)
+            }
+            return items
+        } else{
+            let filter = mc_data.filter(x => x.name == name)
+            return filter[filter.length - 1]
+        }
+    };
+
+    Minecraft.prototype.biome = async function(name) {
+        let version = "1.18.1"
+        const mc_data = require(`../data/versions/${version}/biomes.json`);
+        let items = [];
+        if(!name) {
+            for (const item of mc_data) {
+                items.push(`${item.name}`)
+            }
+            return items
+        } else{
+            let filter = mc_data.filter(x => x.name == name)
+            return filter[filter.length - 1]
+        }
+    };
+
+    Minecraft.prototype.block = async function(name) {
+        let version = "1.18.1"
+        const mc_data = require(`../data/versions/${version}/blocks.json`);
+        let items = [];
+        if(!name) {
+            for (const item of mc_data) {
+                items.push(`${item.name}`)
+            }
+            return items
+        } else{
+            let filter = mc_data.filter(x => x.name == name)
+            return filter[filter.length - 1]
+        }
+    };
+
+    Minecraft.prototype.entity = async function(name) {
+        let version = "1.18.1"
+        const mc_data = require(`../data/versions/${version}/entities.json`);
+        let items = [];
+        if(!name) {
+            for (const item of mc_data) {
+                items.push(`${item.name}`)
+            }
+            return items
+        } else{
+            let filter = mc_data.filter(x => x.name == name)
+            return filter[filter.length - 1]
+        }
+    };
 }
 
 module.exports = {

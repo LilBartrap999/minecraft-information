@@ -90,6 +90,10 @@ Require an api key
 |profile|```Object```|name
 |skin|```String```|name
 |server|```Object```|ip
+|item|```Array``` or ```Object```|name
+|biome|```Array``` or ```Object```|name
+|block|```Array``` or ```Object```|name
+|entity|```Array``` or ```Object```|name
 
 ## Information
 

@@ -1,6 +1,6 @@
 {
   "name": "minecraft-information",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "minecraft-information is an npm that makes it easy for you to create commands about minecraft in discord.js for your bot",
   "main": "./index.js",
   "homepage": "https://mc-info.ga",
